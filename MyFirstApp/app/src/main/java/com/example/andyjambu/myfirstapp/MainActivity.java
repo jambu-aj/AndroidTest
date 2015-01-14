@@ -1,6 +1,7 @@
 package com.example.andyjambu.myfirstapp;
 
 import android.content.Intent;
+import android.graphics.Camera;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -53,6 +54,18 @@ public class MainActivity extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
          */
 
+    }
+
+    @Override
+    public void onPause(){
+        super.onPause();
+        Toast.makeText(this, "Application Paused", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onResume(){
+        super.onResume();
+        Toast.makeText(this, "Application Resumed", Toast.LENGTH_SHORT).show();
     }
 
     /**Called when the user clicks the Search button*/
